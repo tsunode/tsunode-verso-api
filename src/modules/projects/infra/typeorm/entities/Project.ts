@@ -1,4 +1,3 @@
-import { uploadConfig } from '@config/upload';
 import { Exclude, Expose } from 'class-transformer';
 import {
   Entity,
@@ -10,6 +9,7 @@ import {
   JoinColumn,
 } from 'typeorm';
 
+import { uploadConfig } from '@config/upload';
 import { User } from '@modules/users/infra/typeorm/entities/User';
 import { getElapsedTime } from '@shared/helpers/getElapsedTime';
 

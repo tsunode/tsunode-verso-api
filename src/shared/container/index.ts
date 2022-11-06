@@ -1,4 +1,4 @@
-import { container } from 'tsyringe';
+import { container, delay } from 'tsyringe';
 
 import '@modules/users/providers';
 import './providers';
@@ -10,10 +10,10 @@ import { IProjectsRepository } from '../../modules/projects/repositories/IProjec
 
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
-  UsersRepository,
+  delay(() => UsersRepository),
 );
 
 container.registerSingleton<IProjectsRepository>(
   'ProjectsRepository',
-  ProjectsRepository,
+  delay(() =>ProjectsRepository),
 );
