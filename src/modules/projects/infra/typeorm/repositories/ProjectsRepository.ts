@@ -39,7 +39,7 @@ class ProjectsRepository implements IProjectsRepository {
           qb.where(
             new Brackets(sqb => {
               sqb.where('description ilike :q', { q: `%${q}%` });
-              sqb.orWhere('title ilike :q', { q: `%${q}%` });
+              sqb.orWhere('Project.title ilike :q', { q: `%${q}%` });
             }),
           );
 
