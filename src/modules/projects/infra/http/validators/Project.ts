@@ -6,7 +6,7 @@ const ProjectValidators = {
       title: Joi.string().required(),
       description: Joi.string().required(),
       link: Joi.string().required(),
-      adtionalLink: Joi.string().optional(),
+      adtionalLink: Joi.string().allow(null, '').optional(),
     },
   }),
   index: celebrate({
