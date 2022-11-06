@@ -14,7 +14,7 @@ const ProjectValidators = {
       page: Joi.number().min(1).required(),
       pageSize: Joi.number().min(1).max(100).required(),
       areaInterest: Joi.string().optional(),
-      q: Joi.string().optional(),
+      q: Joi.string().allow(null, '').optional(),
       userId: Joi.string().uuid().optional(),
     },
   }),
